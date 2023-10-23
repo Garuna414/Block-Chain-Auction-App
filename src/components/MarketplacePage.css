@@ -1,0 +1,99 @@
+.auction-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.auction-item {
+  width: calc(33.33% - 20px); /* Adjust width as needed */
+  margin: 10px;
+}
+
+.auction-box {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
+  position: relative; /* Added for timer positioning */
+}
+
+.auction-box:hover {
+  transform: scale(1.05);
+}
+
+.auction-box img {
+  width: 400px;
+  height: 300px;
+}
+
+.auction-box h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.auction-box .description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.auction-box .price {
+  font-weight: bold;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Additional details */
+.auction-details {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.auction-details p {
+  margin-bottom: 5px;
+  color: #888;
+}
+
+/* Bid button */
+.bid-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 15px;
+}
+
+.bid-button:hover {
+  background-color: green;
+}
+
+/* Timer styling */
+.timer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+  
+  .submit-button{
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #33CC33;    ;
+    color: #336600;
+    cursor: pointer;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1.25rem;
+  }
