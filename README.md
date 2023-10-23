@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -73,3 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Blockchain-Auction-App
 3rd year project about making auction platform based on blockchain.
 >>>>>>> 1710051665d83572c394b204722bd9140c451b8c
+=======
+# Block-Chain-Auction-App
+3rd year project about making auction platform based on blockchain.
+>>>>>>> c896ba27a8b1a2df226e083656779001630f719b
