@@ -3,6 +3,7 @@ import "./styles.css";
 import Form from "react-bootstrap/Form";
 
 function Bidding() {
+  const bidImg = "https://images.unsplash.com/photo-1582901109033-8aad6fed8168?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW50aXF1ZSUyMGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D";
   const [itemName, setItemName] = useState("Painting");
   const [itemDesc, setItemDesc] = useState(
     "Antique painting by famous artist XYZ. Painted in 1950."
@@ -30,7 +31,7 @@ function Bidding() {
   const [noBalanceModal, setNoBalanceModal] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date("2023-10-22T23:59:59");
+    const targetDate = new Date("2023-10-25T23:59:59");
     const updateRemainingTime = () => {
       const currentDate = new Date();
       const timeDiff = targetDate - currentDate;
@@ -103,7 +104,7 @@ function Bidding() {
       <div className="biddingBox">
         <div className="imageInfo">
           <div>
-            <img src="/images/user.jpg" className="image" alt="Item" />
+            <img src={bidImg} className="image" alt="Item" />
           </div>
         </div>
 

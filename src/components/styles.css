@@ -142,13 +142,15 @@ New Website Styling
   height: 70px;
   display: flex;
   flex-direction: row;
-  background-color: gray;
+  background-color: #CCFFCC;
   align-items: center;
 }
 
 .sitename {
   float: left;
   margin: 10px;
+  font-style: bold;
+  color: #049404;
 }
 
 .pacbuttons {
@@ -156,6 +158,7 @@ New Website Styling
   flex-direction: row;
   gap: 30px;
   margin: 0 0 0 20px;
+  color: #049404;
 }
 
 .navbutton {
@@ -200,7 +203,7 @@ New Website Styling
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: beige;
+  background-color: #ccffcc;
   height: calc(100vh - 70px);
   width: 100%;
 }
@@ -255,7 +258,7 @@ New Website Styling
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: beige;
+  background-color: white;
   padding: 10px;
 }
 
@@ -279,7 +282,7 @@ New Website Styling
 .card{
   padding: 10px;
   width: 340px;
-  color: lavender;
+  background-color: black;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -293,12 +296,13 @@ New Website Styling
 }
 
 .imageHolder {
-  height: 50%;
+  height: 300px;
 }
 
 .cardImage {
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .cardInfo {
@@ -316,12 +320,13 @@ New Website Styling
 
 .cardLink {
   text-decoration: none;
+  height: 530px;
 }
 
 /* Bidding Page Styling */
 .bidContainer {
   padding: 20px;
-  background-color: beige;
+  background-color: #ccffcc;
   width: 100vw;
   display: flex;
   flex-direction: column;
