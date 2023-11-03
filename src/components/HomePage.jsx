@@ -85,21 +85,23 @@ const HomePage = () => {
     </div>
   </body> */
 
-    <div>
-      <div className="navigation">
-        <div className="sitename">
-          <p style={{ fontSize: "25px" }}>BitChainX</p>
-        </div>
-        <div className="pacbuttons">
-          <button className="navbutton">Profile</button>
-          <button className="navbutton">About Us</button>
-          <button className="navbutton">Contact Us</button>
-        </div>
-        <div className="lrmbuttons">
-          <button className="navbutton"><Link className="navlink" to="/login">Login </Link></button>
-          <button className="navbutton"><Link className="navlink" to="/signup">Register</Link></button>
-          <button className="navbutton"><Link className="navlink" to="/marketplace">Marketplace</Link></button>
-        </div>
+    <div className="home">
+      <div className="homeImgHolder">
+        <img src="/images/homeImg.jpg" className="homeImage" />
+      </div>
+
+      <h1 className="welcomeText">WELCOME TO BITCHAINX!</h1>
+      <div className="homeText">
+        <h2 style={{ fontSize: "50px" }}></h2>
+        <p style={{ fontSize: "30px", marginBottom: "0" }}>
+          A <u style={{ fontSize: "40px", textDecoration:"none" }}>BLOCKCHAIN-POWERED AUCTION PLATFORM</u>, redefining online auctions with trust and
+        </p>
+        <p style={{ color: "black", fontSize: "30px", marginTop: "0" }}>
+          <u style={{ fontSize: "40px" }}></u> transparency. Our mission is to provide
+          secure, user friendly auctions using blockchain technology and smart
+          contracts. Join us to experience the future of hassle free online
+          bidding.
+        </p>
       </div>
     </div>
   );

@@ -137,6 +137,7 @@ New Website Styling
 
 /* NavBar styling*/
 .navigation {
+  font-family: monospace;
   position: sticky;
   width: 100%;
   height: 70px;
@@ -148,9 +149,12 @@ New Website Styling
 
 .sitename {
   float: left;
+  transform: translateY(7px);
   margin: 10px;
   font-style: bold;
   color: #049404;
+  font-size: 25px;
+  text-decoration: none;
 }
 
 .pacbuttons {
@@ -254,6 +258,7 @@ New Website Styling
 
 /* Market Place Styling */
 .marketContainer {
+  font-family: monospace;
   width: 100%;
   height: 100%;
   display: flex;
@@ -281,18 +286,20 @@ New Website Styling
 
 .card{
   padding: 10px;
-  width: 340px;
+  width: 350px;
   background-color: black;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: 500px;
 }
 
 .card:hover {
   scale: 1.05;
   cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .imageHolder {
@@ -303,6 +310,7 @@ New Website Styling
   width: 100%;
   height: 100%;
   object-fit: contain;
+  margin-bottom: 0;
 }
 
 .cardInfo {
@@ -310,21 +318,51 @@ New Website Styling
   max-height: 50%;
 }
 
-.itemInfo {
+
+.IName{
+  margin-bottom: 0;
+  margin-top: 0;
   font-size: 25px;
+}
+
+.IDesc {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 0;
+  font-size: 20px;
+  /*transform: translateY(-350px);*/
+}
+
+.SName {
+  margin-bottom: 0;
+  font-size: 25px;
+}
+
+.SDesc {
+  margin-top: 0;
+  font-size: 20px;
 }
 
 .sellerInfo {
   font-size: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sellerNR .itemCost{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cardLink {
   text-decoration: none;
-  height: 530px;
+  height: 525px;
 }
 
 /* Bidding Page Styling */
 .bidContainer {
+  font-family: monospace;
   padding: 20px;
   background-color: #ccffcc;
   width: 100vw;
@@ -336,7 +374,7 @@ New Website Styling
 }
 
 .biddingBox {
-  background-color: lavender;
+  background-color: white;
   width: 90%;
   border-radius: 20px;
   display: flex;
@@ -359,6 +397,7 @@ New Website Styling
   object-fit: contain;
 }
 
+
 .bidUserInfo {
   display: flex;
   flex-direction: column;
@@ -374,6 +413,16 @@ New Website Styling
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+
+#balance {
+  font-weight: 600;
+}
+
+#currentBid {
+  width: 50%;
+  font-weight: 600;
+}
+
 
 .itemDetails {
   font-size: 25px;
@@ -397,7 +446,7 @@ New Website Styling
 }
 
 .tag {
-  background-color: greenyellow;
+  background-color: #7cd47c;
   text-transform: uppercase;
   margin: 0 5px 0 0;
   padding: 0 5px;
@@ -511,3 +560,47 @@ New Website Styling
   flex-direction: row;
   width: 50%;
 }
+
+.bidValue {
+  width: 40%;
+  /*border: 2px solid black;*/
+}
+
+/*Home Page CSS*/
+.home {
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  background-color: #0e3837;
+  height: calc(100vh - 70px);
+  position: fixed;
+}
+
+.homeImgHolder {
+
+}
+
+.welcomeText {
+  font-family: monospace;
+  font-size: 80px;
+  margin-bottom: 20px;
+  left: 20px;
+  color: white;
+  padding: 10px;
+  position: absolute;
+}
+
+.homeImage {
+  width: 100%;
+}
+
+.homeText {
+  position: absolute;
+  left: 20px;
+  top: 105px;
+  color: white;
+  padding: 10px;
+  width: 590px;
+}
+

@@ -3,13 +3,19 @@ import "./styles.css";
 import Form from "react-bootstrap/Form";
 
 function Bidding() {
-  const bidImg = "https://images.unsplash.com/photo-1582901109033-8aad6fed8168?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW50aXF1ZSUyMGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D";
+  const bidImg =
+    "https://images.unsplash.com/photo-1582901109033-8aad6fed8168?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW50aXF1ZSUyMGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D";
   const [itemName, setItemName] = useState("Painting");
   const [itemDesc, setItemDesc] = useState(
     "Antique painting by famous artist XYZ. Painted in 1950."
   );
-  const [sName, setSName] = useState("Mr.Seller");
-  const [itemTags, setItemTags] = useState(["furniture", "antique", "physical", "wooden"]);
+  const [sName, setSName] = useState("John Doe");
+  const [itemTags, setItemTags] = useState([
+    "furniture",
+    "antique",
+    "physical",
+    "wooden",
+  ]);
   const [sRating, setSRating] = useState(4.2);
   const [status, setStatus] = useState("ONGOING");
   const [currentBid, setCurrentBid] = useState(2000);
@@ -31,7 +37,7 @@ function Bidding() {
   const [noBalanceModal, setNoBalanceModal] = useState(false);
 
   useEffect(() => {
-    const targetDate = new Date("2023-10-25T23:59:59");
+    const targetDate = new Date("2023-11-04T23:59:59");
     const updateRemainingTime = () => {
       const currentDate = new Date();
       const timeDiff = targetDate - currentDate;
@@ -112,7 +118,7 @@ function Bidding() {
           <div className="bidInfo">
             <div className="sellerDetails">
               <p id="SName">Seller: {sName}</p>
-              <p id="SRating" style={{ fontSize: "20px", marginBottom:"0" }}>
+              <p id="SRating" style={{ fontSize: "20px", marginBottom: "0" }}>
                 Rating: {sRating}
               </p>
             </div>
@@ -129,11 +135,13 @@ function Bidding() {
               <p id="itemDesc" style={{ fontSize: "20px" }}>
                 {itemDesc}
               </p>
-              <p id="bidStatus" style={{marginBottom:"0"}}>Status: {status}</p>
+              <p id="bidStatus" style={{ marginBottom: "0" }}>
+                Status: {status}
+              </p>
             </div>
 
             <div className="timeInfo">
-              <p id="timeLeft" style={{marginBottom:"0"}}>
+              <p id="timeLeft" style={{ marginBottom: "0" }}>
                 Time Remaining: {timeLeft.days}:{timeLeft.hours}:
                 {timeLeft.minutes}:{timeLeft.seconds}
               </p>
@@ -141,15 +149,13 @@ function Bidding() {
           </div>
 
           <div className="userInfo">
-            <p id="balance">Your Balance: {balance} currency</p>
+            <p id="balance">BALANCE: {balance} currency</p>
             <div className="bidAmount">
-              <p id="currentBid" style={{ width: "50%" }}>
-                Current Bid: {currentBid}
-              </p>
+              <p id="currentBid">CURRENT BID: {currentBid}</p>
               <div className="bidInput">
                 <form style={{ display: "flex", flexDirection: "row" }}>
                   <p>Your Bid:&nbsp;</p>
-                  <Form.Group style={{ width: "55%" }} controlId="input">
+                  <Form.Group className=" bidValue" controlId="bidValue">
                     <Form.Control
                       required
                       type="number"
@@ -160,7 +166,6 @@ function Bidding() {
                   </Form.Group>
                 </form>
               </div>
-              
             </div>
 
             <div className="placeBidTimer">
@@ -172,17 +177,14 @@ function Bidding() {
               >
                 Place Bid
               </button>
-              <p style={{marginBottom:"0"}}>Bid in {bidTimer}s</p>
+              <p style={{ marginBottom: "0" }}>Bid in {bidTimer}s</p>
             </div>
 
             {successModal && (
               <div className="overlay" onClick={closeModal}>
                 <div className="popUp">
                   <div className="modalMsg">
-                    <span
-                      className="close"
-                      onClick={closeModal}
-                    >
+                    <span className="close" onClick={closeModal}>
                       &times;
                     </span>
                     <h2>SUCCESS</h2>
@@ -196,10 +198,7 @@ function Bidding() {
               <div className="overlay" onClick={closeModal}>
                 <div className="popUp">
                   <div className="modalMsg">
-                    <span
-                      className="close"
-                      onClick={closeModal}
-                    >
+                    <span className="close" onClick={closeModal}>
                       &times;
                     </span>
                     <h2>INVALID INPUT</h2>
@@ -213,10 +212,7 @@ function Bidding() {
               <div className="overlay" onClick={closeModal}>
                 <div className="popUp">
                   <div className="modalMsg">
-                    <span
-                      className="close"
-                      onClick={closeModal}
-                    >
+                    <span className="close" onClick={closeModal}>
                       &times;
                     </span>
                     <h2>NOT ENOUGH BALANCE</h2>
@@ -230,10 +226,7 @@ function Bidding() {
               <div className="overlay" onClick={closeModal}>
                 <div className="popUp">
                   <div className="modalMsg">
-                    <span
-                      className="close"
-                      onClick={closeModal}
-                    >
+                    <span className="close" onClick={closeModal}>
                       &times;
                     </span>
                     <h2>TIME OUT</h2>
@@ -247,10 +240,7 @@ function Bidding() {
               <div className="overlay" onClick={closeModal}>
                 <div className="popUp">
                   <div className="modalMsg">
-                    <span
-                      className="close"
-                      onClick={closeModal}
-                    >
+                    <span className="close" onClick={closeModal}>
                       &times;
                     </span>
                     <h2>LOWER BID PLACED</h2>
