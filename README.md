@@ -23,7 +23,7 @@ BidChainX is a blockchain-based auction platform built using React, allowing use
 
 ## Installation
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone [<repository-url>](https://github.com/Garuna414/Block-Chain-Auction-App)`
 2. Install dependencies: `npm install`
 3. Run the development server: `npm start`
 
@@ -38,9 +38,6 @@ BidChainX is a blockchain-based auction platform built using React, allowing use
 7. Auctioneers can end auctions prematurely if needed.
 8. Upon auction completion, the ERC721 token ownership is transferred to the highest bidder, and the auctioneer receives the payment.
 
-## Contributors
-
-- [Your Name](https://github.com/yourusername)
 
 ## License
 
