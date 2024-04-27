@@ -1,0 +1,140 @@
+.sub-heading {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.mainData {
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 10px 15px;
+}
+
+.graphContainer {
+    height: 300px;
+    width: 100%;
+    padding: 10px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tncns {
+    max-height: 43%;
+    overflow-y: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.timeFrame {
+    font-size: 20px;
+    color: grey;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.divider {
+    margin-top: 0;
+}
+
+.tncnInfo {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 80%;
+    height: 60px;
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-left: 70px;
+}
+
+.iconDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+.tncnIcon {
+    height: 40px;
+}
+
+.nameDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.tncnName, .tncnCost{
+    font-size: 25px;
+    margin: 0;
+}
+
+.costDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.statsData {
+    width: 30%;
+    height: 100%;
+    background-color: azure;   
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;     
+    padding: 10px 15px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+
+.catNameBox {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.catCostBox {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.catName, .catCost {
+    font-size: 20px;
+    color: green;
+    margin: 0;
+}

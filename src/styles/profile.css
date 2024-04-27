@@ -1,0 +1,35 @@
+/* .mainContainer {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    padding: 15px;
+}
+
+.leftContainer {
+    width: 30%;
+    height: 100%;
+    padding: 0 15px;
+}
+
+.heading {
+    font-size: 35px;
+    color: white;
+}
+
+.self-info {
+    
+}
+
+.rightContainer {
+    width: 70%;
+    height: 100%;
+    background-color: lightgrey;
+    padding: 0 15px;
+    border-radius: 15px;
+}
+
+.sub-heading {
+    font-size: 25px;
+    color: black;
+} */

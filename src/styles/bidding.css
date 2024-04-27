@@ -1,0 +1,479 @@
+.sub-heading {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.mainBidData {
+    /* width: 70%; */
+    height: 100%;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 10px 15px;
+}
+
+.bidBox {
+    height: 100%;
+}
+
+.imgGraph {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.bidImgBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 250px;
+    width: 250px;
+    padding-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bidBasicInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bidGraph {
+    width: 50%;
+}
+
+.bidImg {
+  display: block;
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.bidInfoBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.bidData {
+    font-size: 20px;
+    margin: 0;
+}
+
+.sliderBox {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.sliderBar {
+    width: 75%;
+}
+
+.sliderValue {
+    width: 20%;
+}
+
+.pastBids {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+
+.pastBid {
+  width: 100%;
+  height: 35px;
+  background-color: aqua;
+  padding: 0 10px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.statsData {
+    width: 30%;
+    height: 100%;
+    background-color: azure;   
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;     
+    padding: 10px 15px;
+}
+
+.bidderList {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.latestBid, .highestBid {
+    width: 48%;
+    display: flex;
+    flex-direction: column;    
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+}
+
+.bidder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+
+.bidderNameBox {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bidderName, .bidValue {
+    font-size: 20px;
+    color: green;
+    margin: 0;
+}
+
+.bidValueBox {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bidInput {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.userInp {
+    background-color: white;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+.submitBtn {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+}
+
+.submitBtn:hover  {
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+/* .sub-heading {
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.mainData {
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 10px 15px;
+}
+
+.statsData {
+    width: 30%;
+    height: 100%;
+    background-color: azure;   
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;     
+    padding: 10px 15px;
+} */
+
+
+
+/*
+
+import React, { useState, useEffect } from "react";
+import "./styles.css";
+import Form from "react-bootstrap/Form";
+
+function Bidding() {
+  const bidImg =
+    "https://images.unsplash.com/photo-1582901109033-8aad6fed8168?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW50aXF1ZSUyMGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D";
+  const [itemName, setItemName] = useState("Painting");
+  const [itemDesc, setItemDesc] = useState(
+    "Antique painting by famous artist XYZ. Painted in 1950."
+  );
+  const [sName, setSName] = useState("John Doe");
+  const [itemTags, setItemTags] = useState([
+    "furniture",
+    "antique",
+    "physical",
+    "wooden",
+  ]);
+  const [sRating, setSRating] = useState(4.2);
+  const [status, setStatus] = useState("ONGOING");
+  const [currentBid, setCurrentBid] = useState(2000);
+  const [inputValue, setInputValue] = useState("");
+  const [bidAmount, setBidAmount] = useState(0);
+  const [bidTimer, setBidTimer] = useState(10);
+  const [btnState, setBtnState] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const [balance, setBalance] = useState(5000);
+  const [successModal, setSuccessModal] = useState(false);
+  const [timeOutModal, setTimeOutModal] = useState(false);
+  const [noNullModal, setNoNullModal] = useState(false);
+  const [higherBidModal, setHigherBidModal] = useState(false);
+  const [noBalanceModal, setNoBalanceModal] = useState(false);
+
+  useEffect(() => {
+    const targetDate = new Date("2023-11-04T23:59:59");
+    const updateRemainingTime = () => {
+      const currentDate = new Date();
+      const timeDiff = targetDate - currentDate;
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+      setTimeLeft({ days, hours, minutes, seconds });
+    };
+    const intervalId = setInterval(updateRemainingTime, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
+    const timerInterval = setInterval(() => {
+      if (bidTimer > 0) {
+        setBidTimer((prevTime) => prevTime - 1);
+      } else {
+        setStatus("OVER");
+        setTimeOutModal(true);
+        setBtnState(true);
+        clearInterval(timerInterval);
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(timerInterval);
+    };
+  }, [bidTimer]);
+
+  const closeModal = () => {
+    setSuccessModal(false);
+    setNoNullModal(false);
+    setNoBalanceModal(false);
+    setTimeOutModal(false);
+    setHigherBidModal(false);
+  };
+
+  const chkInput = () => {
+    if (bidTimer == 0) {
+      setTimeOutModal(true);
+    } else if (+inputValue > balance) {
+      setNoBalanceModal(true);
+    } else if (inputValue == null || +inputValue == 0) {
+      setNoNullModal(true);
+    } else if (+inputValue <= currentBid) {
+      setHigherBidModal(true);
+    } else {
+      return true;
+    }
+  };
+
+  const updateBids = () => {
+    setCurrentBid(inputValue);
+    setBalance(balance - inputValue);
+    setBidTimer(60);
+  };
+
+  const submit = () => {
+    if (chkInput()) {
+      updateBids();
+      setSuccessModal(true);
+    }
+  };
+
+  return (
+    <div className="bidContainer">
+      <div className="biddingBox">
+        <div className="imageInfo">
+          <div>
+            <img src={bidImg} className="image" alt="Item" />
+          </div>
+        </div>
+
+        <div className="bidUserInfo">
+          <div className="bidInfo">
+            <div className="sellerDetails">
+              <p id="SName">Seller: {sName}</p>
+              <p id="SRating" style={{ fontSize: "20px", marginBottom: "0" }}>
+                Rating: {sRating}
+              </p>
+            </div>
+
+            <div className="itemDetails">
+              <div className="tags">
+                {itemTags.map((tag, index) => (
+                  <span key={index} className="tag">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <p id="itemName">Product: {itemName}</p>
+              <p id="itemDesc" style={{ fontSize: "20px" }}>
+                {itemDesc}
+              </p>
+              <p id="bidStatus" style={{ marginBottom: "0" }}>
+                Status: {status}
+              </p>
+            </div>
+
+            <div className="timeInfo">
+              <p id="timeLeft" style={{ marginBottom: "0" }}>
+                Time Remaining: {timeLeft.days}:{timeLeft.hours}:
+                {timeLeft.minutes}:{timeLeft.seconds}
+              </p>
+            </div>
+          </div>
+
+          <div className="userInfo">
+            <p id="balance">BALANCE: {balance} currency</p>
+            <div className="bidAmount">
+              <p id="currentBid">CURRENT BID: {currentBid}</p>
+              <div className="bidInput">
+                <form style={{ display: "flex", flexDirection: "row" }}>
+                  <p>Your Bid:&nbsp;</p>
+                  <Form.Group className=" bidValue" controlId="bidValue">
+                    <Form.Control
+                      required
+                      type="number"
+                      placeholder={0}
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                    />
+                  </Form.Group>
+                </form>
+              </div>
+            </div>
+
+            <div className="placeBidTimer">
+              <button
+                className="placeBid"
+                id="openModalButton"
+                onClick={submit}
+                disabled={btnState}
+              >
+                Place Bid
+              </button>
+              <p style={{ marginBottom: "0" }}>Bid in {bidTimer}s</p>
+            </div>
+
+            {successModal && (
+              <div className="overlay" onClick={closeModal}>
+                <div className="popUp">
+                  <div className="modalMsg">
+                    <span className="close" onClick={closeModal}>
+                      &times;
+                    </span>
+                    <h2>SUCCESS</h2>
+                    <p>Bid of {inputValue} successfully placed!!</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {noNullModal && (
+              <div className="overlay" onClick={closeModal}>
+                <div className="popUp">
+                  <div className="modalMsg">
+                    <span className="close" onClick={closeModal}>
+                      &times;
+                    </span>
+                    <h2>INVALID INPUT</h2>
+                    <p>Please enter a valid bid value!!</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {noBalanceModal && (
+              <div className="overlay" onClick={closeModal}>
+                <div className="popUp">
+                  <div className="modalMsg">
+                    <span className="close" onClick={closeModal}>
+                      &times;
+                    </span>
+                    <h2>NOT ENOUGH BALANCE</h2>
+                    <p>You do not have sufficient balance!!</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {timeOutModal && (
+              <div className="overlay" onClick={closeModal}>
+                <div className="popUp">
+                  <div className="modalMsg">
+                    <span className="close" onClick={closeModal}>
+                      &times;
+                    </span>
+                    <h2>TIME OUT</h2>
+                    <p>The bid is over!!</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {higherBidModal && (
+              <div className="overlay" onClick={closeModal}>
+                <div className="popUp">
+                  <div className="modalMsg">
+                    <span className="close" onClick={closeModal}>
+                      &times;
+                    </span>
+                    <h2>LOWER BID PLACED</h2>
+                    <p>Please place a bid higher than {currentBid}!!</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Bidding;
+
+
+*/

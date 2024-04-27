@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+.homeContainer {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainContainer {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  height: max-content;
+  padding: 15px;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.topContainer {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leftContainer {
+  height: 100%;
+  padding: 0 15px;
+}
+
+.rightContainer {
+  width: 80%;
+  height: 92%;
+  background-color: lightgrey;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.appLoading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background-color: white;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/*
+
+async function loadWeb3() {
+  if (window.ethereum) {
+    try {
+      // Disable UI elements while request is in progress
+      // Display loading spinner or disable button
+
+      await window.ethereum.request({ method: "eth_requestAccounts" });
+      window.web3 = new Web3(window.ethereum);
+      return true;
+    } catch (error) {
+      // Handle error gracefully
+      console.error("Error requesting accounts:", error);
+      // Display error message to the user
+    }
+  } else {
+    // MetaMask not detected
+    alert("No Metamask detected!!");
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+*/
